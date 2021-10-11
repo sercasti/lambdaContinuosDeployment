@@ -31,6 +31,7 @@ Resources:
   LambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
+      PackageType: Zip
       FunctionName: ${LAMBDA_FUNCTION_NAME}-${BRANCH}
       Handler: lambda_function.lambda_handler
       Runtime: python3.7
