@@ -32,10 +32,10 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       PackageType: Zip
-      FunctionName: ${LAMBDA_FUNCTION_NAME}-${BRANCH}
+      FunctionName: ${LAMBDA_FUNCTION_NAME}-dev
       Handler: lambda_function.lambda_handler
       Runtime: python3.7
-      CodeUri: s3://${S3_BUCKET}/${BRANCH}/${LAMBDA_FUNCTION_NAME}_v${TARGET_LAMBDA_FUNCTION_VERSION}.zip
+      CodeUri: s3://${S3_BUCKET}/dev/${LAMBDA_FUNCTION_NAME}_v${TARGET_LAMBDA_FUNCTION_VERSION}.zip
       AutoPublishAlias: default
       Timeout: 30
       DeploymentPreference:
